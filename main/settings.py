@@ -24,7 +24,7 @@ SECRET_KEY = 'eail%-u*i8k0(!1l@qy#8a62#2z%7k_e19(9tnm!l3o_#0xrl5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.154.16.185', '10.128.0.9']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -32,12 +32,12 @@ ALLOWED_HOSTS = ['104.154.16.185', '10.128.0.9']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'corsheaders',
     'django.contrib.contenttypes',
     'rest_framework.authtoken',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
     'drf_yasg',
 
     'rest_framework',
@@ -64,10 +64,12 @@ MIDDLEWARE_CLASSES = (
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://travel-startup-kg.herokuapp.com"
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
-    'http://localhost:3000',
+    "http://localhost:3000",
+    "https://travel-startup-kg.herokuapp.com"
 ]
 
 
